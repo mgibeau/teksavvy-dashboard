@@ -24,7 +24,7 @@ class DetailsBarChart extends Component {
         const values = records.map((record, idx) => ({
           x: moment(record.Date).format('YYYY-MM-DD'),
           y: record.OnPeakDownload
-        }));
+        })).reverse();
 
         return <MiniBar
                 height={163}
