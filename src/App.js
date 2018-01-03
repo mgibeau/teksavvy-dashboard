@@ -47,8 +47,8 @@ class App extends Component {
               <Button type="primary" shape="circle" icon="setting" style={{ float: "right" }}></Button>
             </Popover>
           </Header>
-          <Layout style={{ margin: '12px 16px', padding: 24 }}>
-            <Breadcrumb style={{ marginBottom: '12px' }}>
+          <Layout className="App-layout">
+            <Breadcrumb className="App-breadcrumb">
               <Breadcrumb.Item>
                 <Icon type="dashboard" />
               </Breadcrumb.Item>
@@ -63,15 +63,15 @@ class App extends Component {
             </Breadcrumb>
 
             <Row gutter={16}>
-              <Col span={8}>
+              <Col className="App-column" sm={8}>
                 <Chart period={selectedPeriod} limit={limit} />
               </Col>
-              <Col span={16}>
+              <Col className="App-column" sm={16}>
                 <DetailsBarChart period={selectedPeriod} />
               </Col>
             </Row>
           </Layout>
-          <Layout style={{ margin: '0px 16px', padding: 24 }}>
+          <Layout className="App-layout">
             <Row>
               <Col span={24}>
                 <DetailsTable period={selectedPeriod} />

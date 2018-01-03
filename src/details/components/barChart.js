@@ -40,7 +40,7 @@ class DetailsBarChart extends Component {
       <div className="DetailsBarChart">
         <ChartCard
           title="Usage Details"
-          action={<Tooltip title={range}><Icon type="info-circle-o" /></Tooltip>}
+          action={<Tooltip title={range} placement="topRight"><Icon type="calendar" /></Tooltip>}
           total={"On Peak Downloads"}
           contentHeight={160}
           footer={

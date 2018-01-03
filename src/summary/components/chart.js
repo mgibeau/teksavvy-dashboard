@@ -52,7 +52,7 @@ class Chart extends Component {
         <ChartCard
           title="Current Usage"
           contentHeight={200}
-          action={<Tooltip title={`${moment(period.StartDate).format('MMMM Do')} - ${moment(period.EndDate).format('MMMM Do')}`}><Icon type="info-circle-o" /></Tooltip>}
+          action={<Tooltip title={`${moment(period.StartDate).format('MMMM Do')} - ${moment(period.EndDate).format('MMMM Do')}`} placement="topRight"><Icon type="calendar" /></Tooltip>}
           footer={<Field style={{ textAlign: 'center' }} label={footer} />}
         >
           {this.renderPlaceHolder()}
