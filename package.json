@@ -1,0 +1,41 @@
+{
+  "name": "teksavvy-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "ant-design-pro": "^0.3.1",
+    "antd": "^3.1.0",
+    "local-storage": "^1.4.2",
+    "moment": "^2.20.1",
+    "numeral": "^2.0.6",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-scripts": "1.0.17",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "proxy": {
+    "/api": {
+      "target": "https://api.teksavvy.com/web/Usage",
+      "pathRewrite": {
+        "^/api": ""
+      },
+      "secure": false,
+      "headers": {
+        "TekSavvy-APIKey": "UNDEFINED_API_KEY"
+      }
+    }
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "babel-plugin-import": "^1.6.3",
+    "react-app-rewire-less": "^2.1.0",
+    "react-app-rewired": "^1.4.0"
+  }
+}
