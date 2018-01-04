@@ -2,11 +2,7 @@ import moment from 'moment';
 import numeral from 'numeral';
 import hash from 'string-hash';
 import ls from 'local-storage';
-
 import * as d from './actionTypes';
-
-// Mock data to avoid hammering the API
-// import json from './sample/usageRecords.json';
 
 function persistData(key, json) {
   json.fetchedDate = moment();
@@ -74,10 +70,6 @@ export const getUsageDetails = (periodEnd, skip) => {
     dispatch({ type: d.LOADING })
 
     const past30Days = moment(periodEnd).startOf('day').subtract(1, 'months').format()
-
-    // Return the mock data
-    // dispatch(computeTrends(json))
-    // return dispatch(receiveDetails(json))
 
     let filters = []
 
