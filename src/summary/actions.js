@@ -3,9 +3,6 @@ import numeral from 'numeral';
 import ls from 'local-storage';
 import * as s from './actionTypes';
 
-// Mock data to avoid hammering the API
-// import json from './sample/usageRecordsSummary.json';
-
 function persistData(json) {
   json.fetchedDate = moment();
 
@@ -32,9 +29,6 @@ function error(err) {
 export const getUsageSummary = () => {
   return dispatch => {
     dispatch({ type: s.LOADING })
-
-    // Return the mock data
-    // return dispatch(receiveSummary(json))
 
     const cachedData = ls('summary');
 

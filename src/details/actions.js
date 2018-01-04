@@ -1,10 +1,16 @@
 import moment from 'moment';
 import numeral from 'numeral';
-
+import hash from 'string-hash';
+import ls from 'local-storage';
 import * as d from './actionTypes';
 
-// Mock data to avoid hammering the API
-// import json from './sample/usageRecords.json';
+function persistData(key, json) {
+  json.fetchedDate = moment();
+
+  ls(key, json)
+
+  return json
+}
 
 function receiveDetails(json) {
   return {
@@ -63,19 +69,26 @@ export const getUsageDetails = (periodEnd, skip) => {
   return dispatch => {
     dispatch({ type: d.LOADING })
 
-    const past30Days = moment(periodEnd).subtract(1, 'months').format()
-
-    // Return the mock data
-    // dispatch(computeTrends(json))
-    // return dispatch(receiveDetails(json))
+    const past30Days = moment(periodEnd).startOf('day').subtract(1, 'months').format()
 
     let filters = []
 
     filters.push(`Date ge DateTime'${past30Days}'`)
     periodEnd && filters.push(`Date le DateTime'${periodEnd}'`)
 
+    // Create a hashed key from the filters for caching
+    const key = hash(periodEnd || 'daily');
+    const cachedData = ls(key);
+
+    if (cachedData && !moment().isAfter(cachedData.fetchedDate, 'days')) {
+      dispatch(receiveDetails(cachedData))
+      dispatch(computeTrends(cachedData))
+      return false;
+    }
+
     return fetch(`/api/UsageRecords?$orderby=Date desc&$filter=${filters.join(' and ')}&$inlinecount=allpages`)
       .then(res => res.json())
+      .then(json => persistData(key, json))
       .then(json => {
         dispatch(receiveDetails(json))
         dispatch(computeTrends(json))
