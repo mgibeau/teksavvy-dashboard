@@ -1,0 +1,15 @@
+sudo: required
+
+language: node_js
+node_js:
+  - "node"
+  - "8"
+
+services:
+  - docker
+
+script:
+  - yarn build
+  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+  - docker build -t maxjbo/teksavvy-dashboard .
+  - docker push maxjbo/teksavvy-dashboard

@@ -5,6 +5,13 @@ A completely over-engineered dashboard for tracking TekSavvy bandwidth usage.
 It is based on react-create-app.
 
 
+## Getting Started
+
+`docker run -d -p 3000:3000 -e TSI_API_KEY={YOUR API KEY} maxjbo/teksavvy-dashboard`
+
+You will now be able to access the dashboard at `http://host:3000`
+
+
 ## Configuration
 
 You will need to get your API key from the [customer portal](https://myaccount.teksavvy.com/ApiKey/ApiKeyManagement) and
