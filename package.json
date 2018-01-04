@@ -13,7 +13,8 @@
     "react-redux": "^5.0.6",
     "react-scripts": "1.0.17",
     "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "string-hash": "^1.1.3"
   },
   "proxy": {
     "/api": {
