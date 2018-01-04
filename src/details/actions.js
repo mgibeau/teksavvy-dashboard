@@ -34,6 +34,9 @@ function computeTrends(json) {
 
   const effectiveRange = `${moment(records[records.length - 1].Date).format('MMMM Do')} - ${moment(records[0].Date).format('MMMM Do')}`
 
+  const period = records.slice(0, 31).map(record => (record.OnPeakDownload));
+  const avgPeriod = numeral(period.reduce((a, b) => (a + b)) / period.length).format('0.00');
+
   return {
     type: d.GET_TRENDS,
     trends: {
@@ -41,6 +44,7 @@ function computeTrends(json) {
       dailyAmount: percentagePreviousDay,
       weekly: trend7days,
       weeklyAmount: percentage7days,
+      averagePeriod: avgPeriod,
     },
     range: effectiveRange
   }

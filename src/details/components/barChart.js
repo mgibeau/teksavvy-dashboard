@@ -45,7 +45,11 @@ class DetailsBarChart extends Component {
           contentHeight={160}
           footer={
             <div>
-              <span>
+                <span>
+                  Period Average
+                  <Trend flag={trends.averagePeriod} style={{ marginLeft: 8, color: 'rgba(0,0,0,.85)' }}>{trends.averagePeriod} GB/Day</Trend>
+                </span>
+                <span style={{ marginLeft: 16 }}>
                 Last Day
                 <Trend flag={trends.daily} style={{ marginLeft: 8, color: 'rgba(0,0,0,.85)' }}>{trends.dailyAmount}</Trend>
               </span>
