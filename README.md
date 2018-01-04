@@ -4,6 +4,8 @@ A completely over-engineered dashboard for tracking TekSavvy bandwidth usage.
 
 It is based on react-create-app.
 
+![TekSavvy Dashboard](https://raw.githubusercontent.com/mgibeau/teksavvy-dashboard/master/assets/ui.png)
+
 
 ## Getting Started
 
