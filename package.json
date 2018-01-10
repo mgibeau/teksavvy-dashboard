@@ -1,7 +1,10 @@
 {
   "name": "teksavvy-dashboard",
+  "description": "Dashboard for tracking TekSavvy bandwidth usage",
+  "author": "Maxime Gibeau <maxime@gibeau.email>",
   "version": "0.1.0",
   "private": true,
+  "main": "electron.js",
   "dependencies": {
     "express": "^4.16.2",
     "http-proxy-middleware": "^0.17.4"
@@ -22,12 +25,17 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "devDependencies": {
     "ant-design-pro": "^0.3.1",
     "antd": "^3.1.0",
     "babel-plugin-import": "^1.6.3",
+    "electron": "^1.7.10",
+    "electron-builder": "^19.52.1",
     "local-storage": "^1.4.2",
     "moment": "^2.20.1",
     "numeral": "^2.0.6",
@@ -40,5 +48,15 @@
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
     "string-hash": "^1.1.3"
+  },
+  "build": {
+    "appId": "com.maxjbo.teksavvy-dashboard",
+    "win": {
+      "icon": "public/favicon.ico"
+    },
+    "directories": {
+      "buildResources": "public"
+    },
+    "extends": null
   }
 }
