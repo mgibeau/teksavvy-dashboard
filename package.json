@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "express": "^4.16.2",
-    "http-proxy-middleware": "^0.17.4"
+    "http-proxy-middleware": "^0.19.1"
   },
   "proxy": {
     "/api": {
@@ -25,7 +25,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "ant-design-pro": "^0.3.1",
+    "ant-design-pro": "^2.3.1",
     "antd": "^3.1.0",
     "babel-plugin-import": "^1.6.3",
     "local-storage": "^1.4.2",
@@ -33,11 +33,11 @@
     "numeral": "^2.0.6",
     "react": "^16.2.0",
     "react-app-rewire-less": "^2.1.0",
-    "react-app-rewired": "^1.4.0",
+    "react-app-rewired": "^2.1.1",
     "react-dom": "^16.2.0",
-    "react-redux": "^5.0.6",
-    "react-scripts": "1.0.17",
-    "redux": "^3.7.2",
+    "react-redux": "^6.0.1",
+    "react-scripts": "2.1.8",
+    "redux": "^4.0.1",
     "redux-thunk": "^2.2.0",
     "string-hash": "^1.1.3"
   }
