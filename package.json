@@ -28,11 +28,11 @@
     "ant-design-pro": "^2.3.1",
     "antd": "^3.1.0",
     "babel-plugin-import": "^1.6.3",
+    "customize-cra": "^0.2.12",
     "local-storage": "^1.4.2",
     "moment": "^2.20.1",
     "numeral": "^2.0.6",
     "react": "^16.2.0",
-    "react-app-rewire-less": "^2.1.0",
     "react-app-rewired": "^2.1.1",
     "react-dom": "^16.2.0",
     "react-redux": "^6.0.1",
@@ -40,5 +40,11 @@
     "redux": "^4.0.1",
     "redux-thunk": "^2.2.0",
     "string-hash": "^1.1.3"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
