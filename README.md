@@ -1,5 +1,7 @@
 # TekSavvy Dashboard
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mgibeau/teksavvy-dashboard.svg)](https://greenkeeper.io/)
+
 A completely over-engineered dashboard for tracking TekSavvy bandwidth usage.
 
 It is based on react-create-app.
