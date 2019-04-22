@@ -29,7 +29,7 @@
     "antd": "^3.1.0",
     "babel-plugin-import": "^1.6.3",
     "customize-cra": "^0.2.12",
-    "local-storage": "^1.4.2",
+    "local-storage": "^2.0.0",
     "moment": "^2.20.1",
     "numeral": "^2.0.6",
     "react": "^16.2.0",
