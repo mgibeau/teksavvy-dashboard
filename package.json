@@ -25,7 +25,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "ant-design-pro": "^2.3.1",
+    "ant-design-pro": "^2.3.2",
     "antd": "^3.1.0",
     "babel-plugin-import": "^1.6.3",
     "customize-cra": "^0.2.12",
