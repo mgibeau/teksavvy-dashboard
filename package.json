@@ -30,7 +30,7 @@
     "babel-plugin-import": "^1.6.3",
     "customize-cra": "^0.2.12",
     "local-storage": "^2.0.0",
-    "moment": "^2.20.1",
+    "moment": "^2.29.2",
     "numeral": "^2.0.6",
     "react": "^16.2.0",
     "react-app-rewired": "^2.1.1",
